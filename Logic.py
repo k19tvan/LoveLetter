@@ -507,8 +507,6 @@ class GameRound:
                     f"Still a tie! {[p.name for p in final_winners]} win this round.")
         self.ui['award_round_tokens_callback'](final_winners)
     
-    # ... ALL THE _effect_... and _resolve_... METHODS FROM THE ORIGINAL CODE ...
-    # ... GO HERE, UNCHANGED. (I've included them all below for completeness) ...
     def _effect_guard(self, player, card_played, must_target_self):
         valid_targets = self._get_valid_targets(player, include_self=False, targeted_effect_requires_unprotected=True)
         if must_target_self:  # Guard cannot target self
